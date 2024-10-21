@@ -96,5 +96,6 @@ within certain Unix command line utilities *and* in Python *and* in R!
 - A search pattern, using a defined syntax, allows non-specific but directed matching.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+  
 
 [r-markdown]: https://rmarkdown.rstudio.com/
