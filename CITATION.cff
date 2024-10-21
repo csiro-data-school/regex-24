@@ -5,7 +5,7 @@
 # ensuring that the author list and other fields remain accurate.
 
 cff-version: 1.2.0
-title: FIXME
+title: Intro to Regular Expressions
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
@@ -13,10 +13,10 @@ message: >-
   training material.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Andrew
+    family-names: Spriggs
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  An introduction to regular expressions, starting with Grep and Sed,
+  then moving to R and Python examples. 
+  For CSIRO Ag&Food Data School, 2024
 license: CC-BY-4.0
