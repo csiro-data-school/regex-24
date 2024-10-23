@@ -84,7 +84,8 @@ Written as | Equivalent to
 
 
 Here are some examples.  
-The first two words of a line (start of line, word, space(s), word):
+The first two words of a line (start of line, word, space(s), word):  
+
 ~~~bash
 echo 'word1 word_2 thirdWord' | grep -E -o '^\w+\s+\w+'
 ~~~
@@ -94,7 +95,8 @@ word1 word_2
 ~~~
 
 
-A word with spaces at both ends:
+A word with spaces at both ends:  
+
 ~~~bash
 echo 'word1 word_2 thirdWord!?' | grep -E -o '\s\w+\s'
 ~~~
@@ -104,7 +106,8 @@ echo 'word1 word_2 thirdWord!?' | grep -E -o '\s\w+\s'
 ~~~
 
 
-Every set of consecutive non-space characters:
+Every set of consecutive non-space characters:  
+  
 ~~~bash
 echo 'word1 word_2 thirdWord!?' | grep -E -o '\S+'
 ~~~
@@ -116,7 +119,8 @@ thirdWord!?
 ~~~
 
 
-Everything up to the boundary of the last word:
+Everything up to the boundary of the last word:  
+
 ~~~bash
 echo 'word1 word_2 thirdWord!?' | grep -E -o '.+\<'
 ~~~
@@ -126,7 +130,8 @@ word1 word_2
 ~~~
 
 
-The middle characters of each word (bounded by not-a-word-boundary):
+The middle characters of each word (bounded by not-a-word-boundary):  
+
 ~~~bash
 echo 'word1 word_2 thirdWord!?' | grep -E -o '\B\w+\B'
 ~~~
@@ -225,7 +230,8 @@ blah2 blah2
 We had the same outcome, but stored letters part "blah" separate to the digits part "2", then
 referred to the two captured parts as '\\1' and '\\2' respectively.  
 
-Consider the following:
+Consider the following:  
+  
 ~~~bash
 echo 'ABCDEFGGFEDCBA' | grep -E -o '(\w)(\w)(\w)\3\2\1'
 ~~~

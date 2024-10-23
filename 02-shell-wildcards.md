@@ -19,10 +19,12 @@ exercises: 20
 
   
 While using a Unix shell, you may have already become familiar with a simple form of regular 
-expression. Have you ever used a command like this?
+expression. Have you ever used a command like this?  
+
 ~~~bash
 ls *.txt
 ~~~  
+
 It's a searchable pattern which means "match anything that ends in .txt".
 The * works as a wildcard, expanding to match *any* of zero or more characters.
 
@@ -32,7 +34,8 @@ However, there are other wildcards available that allow for more specific and co
 ## '?' to match any single character  
   
 The ? wildcard matches any character, but always exactly one character.  
-For example:
+For example:  
+
 ~~~bash
 ls sample?.txt  
 ~~~  
@@ -70,17 +73,19 @@ matching to a list of options or ranges.
   
 ## '[ ]' to match any single character in a list or range  
 
-Use of square brackets \[ *list* \] allows matching to a single character, 
+Use of square brackets ```[ *list* ]``` allows matching to a single character, 
 where that character has to match any of the options listed between the brackets.
 The brackets may contain a list, or a range, or a mix of both. 
-For example, to match any one digit from 0 to 9, the following are equivalent:
+For example, to match any one digit from 0 to 9, the following are equivalent:  
+
 ~~~bash  
 [0123456789]
 [0-9]
 [0-789]
 ~~~
   
-Ranges work for alphabet characters too. The following are equivalent:
+Ranges work for alphabet characters too. The following are equivalent:  
+
 ~~~bash
 [ABCDEFG]
 [A-G]
@@ -94,6 +99,7 @@ Important: as always on a Unix shell, case matters!  A list of all alphanumeric 
 
 So back to our earlier challenge of listing files for sample numbers 10-19.  
 A better solution may be:  
+
 ~~~bash
 ls sample1[0-9].txt
 ~~~
@@ -130,7 +136,8 @@ ls sample*[A-Z].txt
 
 Connected to the square bracket notation is the NOT(!) symbol '[! ]'. 
 Use of a '!' inside '[ ]' makes it match to any single character NOT in the list.  
-E.g. 
+E.g.:  
+
 ~~~bash
 [!A]
 ~~~
@@ -169,7 +176,8 @@ The difference is, this time we list not just single characters, but entire word
 to choose between.  
 E.g. '{alpha,beta,gamma}' would match 'alpha' and 'beta' and 'gamma'.  
   
-Real example:
+Real example:  
+
 ~~~bash
 ls sample11.{txt,tab,csv}
 sample11.csv  sample11.tab  sample11.txt
@@ -177,12 +185,14 @@ sample11.csv  sample11.tab  sample11.txt
   
 You can use other wildcard patterns within the listed options.  
 So these are equivalent:  
+
 ~~~bash
 ls *.{tab,csv}
 ls {*.tab,*.csv}
 ~~~  
 
 And these are equivalent:  
+
 ~~~bash
 ls sample[A-Z0-9].txt
 ls sample{[A-Z],[0-9]}.txt
@@ -190,6 +200,7 @@ ls sample{[A-Z],[0-9]}.txt
   
 The curly braces actually have their own range capability, 
 even more powerful in that it allows for more than single digit numbers:  
+
 ~~~bash
 ls sample{1..15}.txt
 ls sample{A..C}.txt
@@ -200,12 +211,14 @@ with using curly brackets- They *aren't* actually a form of pattern matching!  R
 thing a shell does is expand the brackets out to form *all posibilities* listed, in full.
   
 So, when you run the first command below, you're *actually* executing the second command below:
+
 ~~~bash
 ls sample{A..C}.txt
 ls sampleA.txt sampleB.txt sampleC.txt
 ~~~  
   
 Contrast:  
+
 ~~~bash
 echo [A-C][1-3]
 [A-C][1-3]
