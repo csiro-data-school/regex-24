@@ -339,17 +339,26 @@ selection.</li>
 </div>
 <p>While using a Unix shell, you may have already become familiar with a
 simple form of regular expression. Have you ever used a command like
-this? ~~~bash ls <em>.txt ~~~<br>
-It’s a searchable pattern which means “match anything that ends in
-.txt”. The </em> works as a wildcard, expanding to match <em>any</em> of
+this?</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">ls</span> <span class="pp">*</span>.txt</span></code></pre>
+</div>
+<p>It’s a searchable pattern which means “match anything that ends in
+.txt”. The * works as a wildcard, expanding to match <em>any</em> of
 zero or more characters.</p>
 <p>However, there are other wildcards available that allow for more
 specific and complex patterns.</p>
 <section><h2 class="section-heading" id="to-match-any-single-character">‘?’ to match any single character<a class="anchor" aria-label="anchor" href="#to-match-any-single-character"></a></h2>
 <hr class="half-width"><p>The ? wildcard matches any character, but always exactly one
 character.<br>
-For example: ~~~bash ls sample?.txt<br>
-~~~</p>
+For example:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">?</span>.txt  </span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -378,11 +387,11 @@ range of 10-19.</li>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">??</span>.txt</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">ls</span> sample1<span class="pp">?</span>.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">??</span>.txt</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">ls</span> sample1<span class="pp">?</span>.txt</span></code></pre>
 </div>
 </div>
 </div>
@@ -393,25 +402,41 @@ would have also picked up a sample “1A”. Not what we were after, but a
 good segue for the next concept- matching to a list of options or
 ranges.</p>
 </section><section><h2 class="section-heading" id="to-match-any-single-character-in-a-list-or-range">‘[ ]’ to match any single character in a list or range<a class="anchor" aria-label="anchor" href="#to-match-any-single-character-in-a-list-or-range"></a></h2>
-<hr class="half-width"><p>Use of square brackets <span class="math display">\[ *list* \]</span>
-allows matching to a single character, where that character has to match
-any of the options listed between the brackets. The brackets may contain
-a list, or a range, or a mix of both. For example, to match any one
-digit from 0 to 9, the following are equivalent: ~<del>bash<br>
-[0123456789] [0-9] [0-789]</del>~</p>
-<p>Ranges work for alphabet characters too. The following are
-equivalent: ~<del>bash [ABCDEFG] [A-G]</del>~</p>
-<p>Important: as always on a Unix shell, case matters! A list of all
-alphanumeric characters is:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<hr class="half-width"><p>Use of square brackets <code>[ *list* ]</code> allows matching to a
+single character, where that character has to match any of the options
+listed between the brackets. The brackets may contain a list, or a
+range, or a mix of both. For example, to match any one digit from 0 to
+9, the following are equivalent:</p>
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">[a-zA-Z0-9]</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">[0123456789]</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">[0-9]</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="ex">[0-789]</span></span></code></pre>
+</div>
+<p>Ranges work for alphabet characters too. The following are
+equivalent:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">[ABCDEFG]</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="ex">[A-G]</span></span></code></pre>
+</div>
+<p>Important: as always on a Unix shell, case matters! A list of all
+alphanumeric characters is:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">[a-zA-Z0-9]</span></span></code></pre>
 </div>
 <p>So back to our earlier challenge of listing files for sample numbers
 10-19.<br>
-A better solution may be:<br>
-~<del>bash ls sample1[0-9].txt</del>~</p>
+A better solution may be:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">ls</span> sample1<span class="pp">[</span><span class="ss">0</span><span class="pp">-</span><span class="ss">9</span><span class="pp">]</span>.txt</span></code></pre>
+</div>
 <p>Remember: an entire ‘[<em>list</em>]’ set will only match a
 <em>single</em> listed character at a time.</p>
 <div id="try-it-2" class="callout challenge">
@@ -438,13 +463,13 @@ in a letter.</li>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">2</span><span class="pp">-</span><span class="ss">5</span><span class="pp">]</span>.txt</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">AX</span><span class="pp">-</span><span class="ss">Z</span><span class="pp">]</span>.txt</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">0</span><span class="pp">-</span><span class="ss">9</span><span class="pp">][</span><span class="ss">A</span><span class="pp">-</span><span class="ss">Z</span><span class="pp">]</span>.txt</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">*[</span><span class="ss">A</span><span class="pp">-</span><span class="ss">Z</span><span class="pp">]</span>.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">2</span><span class="pp">-</span><span class="ss">5</span><span class="pp">]</span>.txt</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">AX</span><span class="pp">-</span><span class="ss">Z</span><span class="pp">]</span>.txt</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">0</span><span class="pp">-</span><span class="ss">9</span><span class="pp">][</span><span class="ss">A</span><span class="pp">-</span><span class="ss">Z</span><span class="pp">]</span>.txt</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">*[</span><span class="ss">A</span><span class="pp">-</span><span class="ss">Z</span><span class="pp">]</span>.txt</span></code></pre>
 </div>
 </div>
 </div>
@@ -454,12 +479,17 @@ in a letter.</li>
 <hr class="half-width"><p>Connected to the square bracket notation is the NOT(!) symbol ‘[! ]’.
 Use of a ‘!’ inside ‘[ ]’ makes it match to any single character NOT in
 the list.<br>
-E.g. ~<del>bash [!A]</del>~</p>
-<p>… would match any character that’s not A.</p>
-<div class="codewrapper sourceCode" id="cb5">
+E.g.:</p>
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">[!0-9]</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">[!A]</span></span></code></pre>
+</div>
+<p>… would match any character that’s not A.</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">[!0-9]</span></span></code></pre>
 </div>
 <p>… would match any character that’s not a digit from 0 to 9.</p>
 <div id="try-it-3" class="callout challenge">
@@ -481,10 +511,10 @@ E.g. ~<del>bash [!A]</del>~</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">!4</span><span class="pp">-</span><span class="ss">79</span><span class="pp">]*</span>.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">!4</span><span class="pp">-</span><span class="ss">79</span><span class="pp">]*</span>.txt</span></code></pre>
 </div>
 </div>
 </div>
@@ -497,27 +527,59 @@ listed inside. The difference is, this time we list not just single
 characters, but entire words or expressions to choose between.<br>
 E.g. ‘{alpha,beta,gamma}’ would match ‘alpha’ and ‘beta’ and
 ‘gamma’.</p>
-<p>Real example: ~<del>bash ls sample11.{txt,tab,csv} sample11.csv
-sample11.tab sample11.txt</del>~</p>
+<p>Real example:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">ls</span> sample11.<span class="dt">{txt</span><span class="op">,</span><span class="dt">tab</span><span class="op">,</span><span class="dt">csv}</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="ex">sample11.csv</span>  sample11.tab  sample11.txt</span></code></pre>
+</div>
 <p>You can use other wildcard patterns within the listed options.<br>
-So these are equivalent:<br>
-~~~bash ls <em>.{tab,csv} ls {</em>.tab,*.csv} ~~~</p>
-<p>And these are equivalent:<br>
-~<del>bash ls sample[A-Z0-9].txt ls sample{[A-Z],[0-9]}.txt</del>~</p>
+So these are equivalent:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">ls</span> <span class="pp">*</span>.<span class="dt">{tab</span><span class="op">,</span><span class="dt">csv}</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">ls</span> <span class="dt">{</span><span class="pp">*</span><span class="dt">.tab</span><span class="op">,</span><span class="pp">*</span><span class="dt">.csv}</span></span></code></pre>
+</div>
+<p>And these are equivalent:</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="pp">[</span><span class="ss">A</span><span class="pp">-</span><span class="ss">Z0</span><span class="pp">-</span><span class="ss">9</span><span class="pp">]</span>.txt</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="fu">ls</span> sample<span class="dt">{[A-Z]</span><span class="op">,</span><span class="dt">[0-9]}</span>.txt</span></code></pre>
+</div>
 <p>The curly braces actually have their own range capability, even more
-powerful in that it allows for more than single digit numbers:<br>
-~<del>bash ls sample{1..15}.txt ls sample{A..C}.txt</del>~</p>
+powerful in that it allows for more than single digit numbers:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="dt">{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">15</span><span class="dt">}</span>.txt</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="fu">ls</span> sample<span class="dt">{</span>A<span class="dt">..</span>C<span class="dt">}</span>.txt</span></code></pre>
+</div>
 <p>BUT if you’ve spotted the warnings while trying these examples, you
 may have guessed the catch with using curly brackets- They
 <em>aren’t</em> actually a form of pattern matching! Rather, the first
 thing a shell does is expand the brackets out to form <em>all
 posibilities</em> listed, in full.</p>
 <p>So, when you run the first command below, you’re <em>actually</em>
-executing the second command below: ~<del>bash ls sample{A..C}.txt ls
-sampleA.txt sampleB.txt sampleC.txt</del>~</p>
-<p>Contrast:<br>
-~~~bash echo [A-C][1-3] [A-C][1-3]</p>
-<p>echo {A..C}{1..3} A1 A2 A3 B1 B2 B3 C1 C2 C3 ~~~</p>
+executing the second command below:</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="dt">{</span>A<span class="dt">..</span>C<span class="dt">}</span>.txt</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="fu">ls</span> sampleA.txt sampleB.txt sampleC.txt</span></code></pre>
+</div>
+<p>Contrast:</p>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="bu">echo</span> <span class="pp">[</span><span class="ss">A</span><span class="pp">-</span><span class="ss">C</span><span class="pp">][</span><span class="ss">1</span><span class="pp">-</span><span class="ss">3</span><span class="pp">]</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="ex">[A-C][1-3]</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>  </span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="bu">echo</span> <span class="dt">{</span>A<span class="dt">..</span>C<span class="dt">}{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">3</span><span class="dt">}</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="ex">A1</span> A2 A3 B1 B2 B3 C1 C2 C3</span></code></pre>
+</div>
 <p>Brace expansion is always the first order of business when the
 command line interprets a command. It’s a useful tool, and while not
 quite fitting the regular expression theme, the concept of listing
@@ -543,11 +605,11 @@ and CD.</li>
 </button>
 <div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">{%raw%}ls</span> sample<span class="dt">{{</span><span class="dv">8</span><span class="dt">..</span><span class="dv">13</span><span class="dt">}</span><span class="op">,</span><span class="dt">CD}</span>.<span class="pp">*</span>{%endraw%}</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">ls</span> sample<span class="dt">{11</span><span class="op">,</span><span class="dt">CD}</span>.<span class="dt">{csv</span><span class="op">,</span><span class="dt">tab}</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">{%raw%}ls</span> sample<span class="dt">{{</span><span class="dv">8</span><span class="dt">..</span><span class="dv">13</span><span class="dt">}</span><span class="op">,</span><span class="dt">CD}</span>.<span class="pp">*</span>{%endraw%}</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="fu">ls</span> sample<span class="dt">{11</span><span class="op">,</span><span class="dt">CD}</span>.<span class="dt">{csv</span><span class="op">,</span><span class="dt">tab}</span></span></code></pre>
 </div>
 </div>
 </div>

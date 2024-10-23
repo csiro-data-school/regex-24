@@ -424,22 +424,34 @@ sed</strong>:</p>
 </tr><tr class="even"><td>\n</td>
 <td>A newline, if program supports multi-line matching</td>
 </tr></tbody></table><p>Here are some examples.<br>
-The first two words of a line (start of line, word, space(s), word):
-~<del>bash echo ‘word1 word_2 thirdWord’ | grep -E -o ‘^+++’</del>~</p>
+The first two words of a line (start of line, word, space(s), word):</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'word1 word_2 thirdWord'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^\w+\s+\w+'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>word1 word_2</code></pre>
 </div>
-<p>A word with spaces at both ends: ~<del>bash echo ‘word1 word_2
-thirdWord!?’ | grep -E -o ‘+’</del>~</p>
+<p>A word with spaces at both ends:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'word1 word_2 thirdWord!?'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'\s\w+\s'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code><span> <span class="va">word_2</span> </span></code></pre>
 </div>
-<p>Every set of consecutive non-space characters: ~<del>bash echo ‘word1
-word_2 thirdWord!?’ | grep -E -o ‘+’</del>~</p>
+<p>Every set of consecutive non-space characters:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'word1 word_2 thirdWord!?'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'\S+'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -447,15 +459,24 @@ word_2 thirdWord!?’ | grep -E -o ‘+’</del>~</p>
 word_2
 thirdWord!?</code></pre>
 </div>
-<p>Everything up to the boundary of the last word: ~<del>bash echo
-‘word1 word_2 thirdWord!?’ | grep -E -o ‘.+&lt;’</del>~</p>
+<p>Everything up to the boundary of the last word:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'word1 word_2 thirdWord!?'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'.+\&lt;'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>word1 word_2  </code></pre>
 </div>
-<p>The middle characters of each word (bounded by not-a-word-boundary):
-~<del>bash echo ‘word1 word_2 thirdWord!?’ | grep -E -o ‘+’</del>~</p>
+<p>The middle characters of each word (bounded by
+not-a-word-boundary):</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'word1 word_2 thirdWord!?'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'\B\w+\B'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -489,14 +510,14 @@ first letter of every word.</li>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^[[:alpha:]]+[[:space:]]+[[:alpha:]]+'</span> wordplay1.txt </span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^\w+\s+\w+'</span> wordplay1.txt  </span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^\S+\s+\S+'</span> wordplay1.txt</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'\bp\w+g\b'</span> wordplay1.txt</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'\&lt;\w'</span> wordplay1.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^[[:alpha:]]+[[:space:]]+[[:alpha:]]+'</span> wordplay1.txt </span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^\w+\s+\w+'</span> wordplay1.txt  </span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^\S+\s+\S+'</span> wordplay1.txt</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'\bp\w+g\b'</span> wordplay1.txt</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'\&lt;\w'</span> wordplay1.txt</span></code></pre>
 </div>
 </div>
 </div>
@@ -538,10 +559,10 @@ though, a “back-reference” to a captured group can be used to identify
 something that repeats identically within a line. The reference to the
 previously seen item is used in the form ‘\number’. It works like
 this:</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'blah1 blah2 blah2 blah4?'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'(\w+)\s+\1'</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'blah1 blah2 blah2 blah4?'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'(\w+)\s+\1'</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -556,10 +577,10 @@ word.</p>
 <p>If we’d like to make multiple back-references, we use multiple pairs
 of round brackets and increment our back-reference number by one for
 each open bracket from left-to-right. E.g.:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'blah1 blah2 blah2 blah4?'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'([a-z]+)([0-9])\s+\1\2'</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'blah1 blah2 blah2 blah4?'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'([a-z]+)([0-9])\s+\1\2'</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -569,8 +590,12 @@ each open bracket from left-to-right. E.g.:</p>
 <p>We had the same outcome, but stored letters part “blah” separate to
 the digits part “2”, then referred to the two captured parts as ‘\1’ and
 ‘\2’ respectively.</p>
-<p>Consider the following: ~<del>bash echo ‘ABCDEFGGFEDCBA’ | grep -E -o
-‘()()()\3\2\1’</del>~</p>
+<p>Consider the following:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'ABCDEFGGFEDCBA'</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'(\w)(\w)(\w)\3\2\1'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -602,12 +627,12 @@ are the same number.</li>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'\b(\w+)\b.+\b\1\b'</span> wordplay1.txt</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^(\w)\w+\s\1\w+'</span> namesndates.txt</span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'([0-9]{2})/\1/[0-9]{4}'</span> namesndates.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'\b(\w+)\b.+\b\1\b'</span> wordplay1.txt</span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^(\w)\w+\s\1\w+'</span> namesndates.txt</span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'([0-9]{2})/\1/[0-9]{4}'</span> namesndates.txt</span></code></pre>
 </div>
 </div>
 </div>

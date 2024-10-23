@@ -339,8 +339,12 @@ streams?</li>
 </div>
 <p>You may have used the command ‘grep’ before, which allows you to
 search for a matching string. It may be given a file name, to make it
-search within a file:<br>
-~<del>bash grep ‘react’ wordplay1.txt</del>~</p>
+search within a file:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">grep</span> <span class="st">'react'</span> wordplay1.txt</span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -348,8 +352,12 @@ search within a file:<br>
 trees   shelf   amused  reactive        sheet
 relation        reacting        handsome        ashamed</code></pre>
 </div>
-<p>Or it can search piped output from another command: ~<del>bash echo
-“Hello Andrew, you are Andrew?” | grep -o “Andrew”</del>~</p>
+<p>Or it can search piped output from another command:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello Andrew, you are Andrew?"</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-o</span> <span class="st">"Andrew"</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -368,8 +376,13 @@ basically the same as most other implementations of regular
 expressions.</p>
 <section><h2 class="section-heading" id="for-matching-this-or-that">‘|’ for matching this or that<a class="anchor" aria-label="anchor" href="#for-matching-this-or-that"></a></h2>
 <hr class="half-width"><p>Like in the ‘if’ statements of most programming languages, the pipe
-character acts as an OR, allowing matching to any of the listed options.
-~<del>bash grep -E ‘boat|bolt|bell’ wordplay1.txt</del>~</p>
+character acts as an OR, allowing matching to any of the listed
+options.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'boat|bolt|bell'</span> wordplay1.txt </span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -379,8 +392,12 @@ exclusive       color   harbor  boat    bedroom</code></pre>
 </div>
 <p>Round brackets may be used to group terms together. This grouping has
 multiple uses, as you’ll see as we continue, but one is to group OR
-options together. E.g.:<br>
-~<del>bash grep -E ‘b(oat|olt|ell)’ wordplay1.txt</del>~</p>
+options together. E.g.:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'b(oat|olt|ell)'</span> wordplay1.txt </span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -388,8 +405,12 @@ options together. E.g.:<br>
 bell    spiritual       materialistic   rule    sponge
 exclusive       color   harbor  boat    bedroom</code></pre>
 </div>
-<p>Consider the following: ~<del>bash echo “ABC” | grep -E -o
-‘(A|B)C’</del>~</p>
+<p>Consider the following:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"ABC"</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'(A|B)C'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -422,16 +443,14 @@ only)</li>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<blockquote>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'corn|cow'</span> wordplay1.txt</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="st">'corn|cow'</span> wordplay1.txt</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'reaction|reactive'</span> wordplay1.txt</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'reacti(on|ve)'</span> wordplay1.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'corn|cow'</span> wordplay1.txt</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="st">'corn|cow'</span> wordplay1.txt</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'reaction|reactive'</span> wordplay1.txt</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'reacti(on|ve)'</span> wordplay1.txt</span></code></pre>
 </div>
-</blockquote>
 </div>
 </div>
 </div>
@@ -442,14 +461,35 @@ only)</li>
 allows matching to a single character, where that character has to match
 any of the options listed between the brackets. The brackets may contain
 a list, or a range, or a mix of both. For example, to match any one
-digit from 0 to 9, the following are equivalent: ~<del>bash [0123456789]
-[0-9] [123-789]</del>~</p>
+digit from 0 to 9, the following are equivalent:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">[0123456789]</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="ex">[0-9]</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="ex">[123-789]</span></span></code></pre>
+</div>
 <p>Ranges work for alphabet characters too. The following are
-equivalent: ~<del>bash [ABCDEFG] [A-G]</del>~</p>
+equivalent:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">[ABCDEFG]</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="ex">[A-G]</span></span></code></pre>
+</div>
 <p>Important: as always on a Unix shell, case matters! A list of all
-alphanumeric characters is: ~<del>bash [a-zA-Z0-9]</del>~</p>
-<p>Example: ~<del>bash echo “bog bag cog cot tog log lag” | grep -E -o
-‘[a-z]og’</del>~</p>
+alphanumeric characters is:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">[a-zA-Z0-9]</span></span></code></pre>
+</div>
+<p>Example:</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"bog bag cog cot tog log lag"</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[a-z]og'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -458,8 +498,12 @@ alphanumeric characters is: ~<del>bash [a-zA-Z0-9]</del>~</p>
 <span><span class="va">tog</span></span>
 <span><span class="va">log</span></span></code></pre>
 </div>
-<p>Example: ~<del>bash echo “1952 1986 2003 1995 2018” | grep -E -o
-‘20[0-9][0-9]’</del>~</p>
+<p>Example:</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"1952 1986 2003 1995 2018"</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'20[0-9][0-9]'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -490,15 +534,15 @@ case?</li>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="st">'[a-z]oat'</span> wordplay1.txt</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="st">'[a-zA-Z]oat'</span> wordplay1.txt</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="st">'[a-zA-Z][oO][aA][tT]'</span> wordplay1.txt</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co"># OR</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="at">-i</span> <span class="st">'[a-z]oat'</span> wordplay1.txt</span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co"># grep -i ignores case (see 'man grep')</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="st">'[a-z]oat'</span> wordplay1.txt</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="st">'[a-zA-Z]oat'</span> wordplay1.txt</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="st">'[a-zA-Z][oO][aA][tT]'</span> wordplay1.txt</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a><span class="co"># OR</span></span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="at">-i</span> <span class="st">'[a-z]oat'</span> wordplay1.txt</span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a><span class="co"># grep -i ignores case (see 'man grep')</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -507,8 +551,12 @@ case?</li>
 <p>When used within square brackets, a ‘^’ means “NOT”. For example
 ‘[^ABC]’ would match any one character that <em>wasn’t</em> A or B or
 C.</p>
-<p>Example: ~<del>bash echo “bog bag cog cot tog log lag” | grep -E -o
-‘[^b][a-z]g’</del>~</p>
+<p>Example:</p>
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"bog bag cog cot tog log lag"</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[^b][a-z]g'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -536,13 +584,11 @@ than ‘boat’ and ‘goat’</li>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<blockquote>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="st">'[^bg]oat'</span> wordplay1.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-w</span> <span class="at">-o</span> <span class="st">'[^bg]oat'</span> wordplay1.txt</span></code></pre>
 </div>
-</blockquote>
 </div>
 </div>
 </div>
@@ -553,8 +599,12 @@ pattern, it anchors the pattern such that it must match from the start
 of a line.<br>
 Similarly, a ‘$’, when placed at the end of a regex pattern, anchors the
 pattern such that it must match up to the end of a line.<br>
-Consider the following examples demonstrating the effect: ~<del>bash
-grep -E ‘repeat’ wordplay1.txt</del>~</p>
+Consider the following examples demonstrating the effect:</p>
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'repeat'</span> wordplay1.txt</span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -562,20 +612,20 @@ grep -E ‘repeat’ wordplay1.txt</del>~</p>
 copper  bad     unpack  repeat  old-fashioned
 sheet   accessible      word    enthusiastic    repeat</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'^repeat'</span> wordplay1.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'^repeat'</span> wordplay1.txt</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>repeat  drum    quilt   superficial     uncovered</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'repeat$'</span> wordplay1.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'repeat$'</span> wordplay1.txt</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -587,7 +637,12 @@ complex patterns with wildcards.</p>
 </section><section><h2 class="section-heading" id="is-the-match-anything-regex-wildcard">‘.’ is the match-anything regex wildcard<a class="anchor" aria-label="anchor" href="#is-the-match-anything-regex-wildcard"></a></h2>
 <hr class="half-width"><p>Speaking of, the match-anything wildcard (any single character) for
 regular expressions is a period, ‘.’</p>
-<p>Consider: ~<del>bash grep -E -o ‘.oat’ wordplay1.txt</del>~</p>
+<p>Consider:</p>
+<div class="codewrapper sourceCode" id="cb29">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'.oat'</span> wordplay1.txt</span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -623,7 +678,12 @@ specify number of occurances, with one of the following:</p>
 </tr><tr class="odd"><td>{,m}</td>
 <td>Repeated at most ‘m’ times</td>
 </tr></tbody></table><p>For example, what if we wanted to search for ‘colour’ but maybe it
-had US spelling? ~<del>bash grep -E ‘colou?r’ wordplay1.txt</del>~</p>
+had US spelling?</p>
+<div class="codewrapper sourceCode" id="cb31">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="st">'colou?r'</span> wordplay1.txt</span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -632,7 +692,12 @@ had US spelling? ~<del>bash grep -E ‘colou?r’ wordplay1.txt</del>~</p>
 <p>Here the ‘?’ modifier let the preceeding ‘u’ match either one time OR
 zero times.</p>
 <p>Lets find all words from our words file that are at least 12 letters
-long: ~<del>bash grep -E -o ‘[a-z]{12,}’ wordplay1.txt</del>~</p>
+long:</p>
+<div class="codewrapper sourceCode" id="cb33">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[a-z]{12,}'</span> wordplay1.txt </span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -696,16 +761,14 @@ of lines starting with a ‘c’<br></li>
 </button>
 <div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<blockquote>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^c.+'</span> wordplay1.txt</span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^c[a-z]+'</span> wordplay1.txt</span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="at">-w</span> <span class="st">'^c[a-z]{4,5}'</span> wordplay1.txt</span>
-<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'(out)?stand(ing)?'</span> wordplay1.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^c.+'</span> wordplay1.txt</span>
+<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'^c[a-z]+'</span> wordplay1.txt</span>
+<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="at">-w</span> <span class="st">'^c[a-z]{4,5}'</span> wordplay1.txt</span>
+<span id="cb35-4"><a href="#cb35-4" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'(out)?stand(ing)?'</span> wordplay1.txt</span></code></pre>
 </div>
-</blockquote>
 </div>
 </div>
 </div>
@@ -713,9 +776,12 @@ of lines starting with a ‘c’<br></li>
 <p>What if we wanted to match a date, and didn’t know if the year would
 be 2 digits or 4? Our pattern for a date is “a digit, from 0-9, either
 one or two of them, then a forward slash, then a digit, either one or
-two of them, then either 2 digits OR 4 digits.” ~<del>bash echo
-“11/06/91 not/a/date 5/9/2018” | grep -E -o
-‘[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})’</del>~</p>
+two of them, then either 2 digits OR 4 digits.”</p>
+<div class="codewrapper sourceCode" id="cb36">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"11/06/91  not/a/date  5/9/2018"</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -723,8 +789,12 @@ two of them, then either 2 digits OR 4 digits.” ~<del>bash echo
 <span><span class="fl">5</span><span class="op">/</span><span class="fl">9</span><span class="op">/</span><span class="fl">2018</span></span></code></pre>
 </div>
 <p>Alternatively, if we were sure about the sensibleness of the contents
-we were searching, we may get away with just: ~<del>bash echo “11/06/91
-5/9/2018” | grep -E -o ‘[0-9]+/[0-9]+/[0-9]+’</del>~</p>
+we were searching, we may get away with just:</p>
+<div class="codewrapper sourceCode" id="cb38">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"11/06/91 5/9/2018"</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[0-9]+/[0-9]+/[0-9]+'</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -756,12 +826,12 @@ sensibleness checking?</p>
 <div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <blockquote>
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[0-9]{1,2}:[0-9]{1,2}'</span> namesndates.txt</span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})'</span> namesndates.txt</span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[0-3]?[0-9]/[0-1]?[0-9]/([0-9]{2}|[0-9]{4})'</span> namesndates.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[0-9]{1,2}:[0-9]{1,2}'</span> namesndates.txt</span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})'</span> namesndates.txt</span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-E</span> <span class="at">-o</span> <span class="st">'[0-3]?[0-9]/[0-1]?[0-9]/([0-9]{2}|[0-9]{4})'</span> namesndates.txt</span></code></pre>
 </div>
 </blockquote>
 </div>
