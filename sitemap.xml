@@ -7,6 +7,15 @@
     <loc>https://csiro-data-school.github.io/regex-24/01-introduction.html</loc>
   </url>
   <url>
+    <loc>https://csiro-data-school.github.io/regex-24/02-shell-wildcards.html</loc>
+  </url>
+  <url>
+    <loc>https://csiro-data-school.github.io/regex-24/03-egrep-find.html</loc>
+  </url>
+  <url>
+    <loc>https://csiro-data-school.github.io/regex-24/04-egrep-charclasses.html</loc>
+  </url>
+  <url>
     <loc>https://csiro-data-school.github.io/regex-24/404.html</loc>
   </url>
   <url>
@@ -29,6 +38,15 @@
   </url>
   <url>
     <loc>https://csiro-data-school.github.io/regex-24/instructor/01-introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://csiro-data-school.github.io/regex-24/instructor/02-shell-wildcards.html</loc>
+  </url>
+  <url>
+    <loc>https://csiro-data-school.github.io/regex-24/instructor/03-egrep-find.html</loc>
+  </url>
+  <url>
+    <loc>https://csiro-data-school.github.io/regex-24/instructor/04-egrep-charclasses.html</loc>
   </url>
   <url>
     <loc>https://csiro-data-school.github.io/regex-24/instructor/404.html</loc>

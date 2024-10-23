@@ -241,6 +241,42 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="02-shell-wildcards.html">2. Shell wildcards - a type of regex</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-egrep-find.html">3. Pattern matching with grep -E, part 1</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-egrep-charclasses.html">4. Pattern matching with grep -E, part 2</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -301,6 +337,93 @@
 <li>Regexs are powerful tools for searching and transforming text.</li>
 <li>A search pattern, using a defined syntax, allows non-specific but
 directed matching.</li>
+</ul></section><section id="02-shell-wildcards"><h2 class="section-heading"><a href="02-shell-wildcards.html">Shell wildcards - a type of regex</a></h2>
+<hr class="half-width">
+<ul>
+<li>Use of wildcards in the Unix shell for file selection is a simple
+form of regular expressions.</li>
+<li>
+<code>*</code> matches zero or more characters</li>
+<li>
+<code>?</code> matches exactly one character</li>
+<li>
+<code>[ ]</code> matches a character from a list or range of
+contained options</li>
+<li>
+<code>[! ]</code> matches a character NOT in a list or range of
+contained options</li>
+<li>
+<code>{ }</code> expands to produce forms of all listed contained
+options</li>
+</ul></section><section id="03-egrep-find"><h2 class="section-heading"><a href="03-egrep-find.html">Pattern matching with grep -E, part 1</a></h2>
+<hr class="half-width">
+<ul>
+<li>grep in Extended Regex mode (or egrep) allows complex pattern
+matching in files/streams.</li>
+<li>
+<code>|</code> acts as an OR between options</li>
+<li>
+<code>( )</code> allows grouping, e.g. for OR modifier, with
+quantifiers, etc..</li>
+<li>
+<code>[ ]</code> matches a character from a list or range of
+contained options</li>
+<li>
+<code>[^ ]</code> matches a character NOT in a list or range of
+contained options</li>
+<li>
+<code>^</code> at the start of a regex means match at start of
+line</li>
+<li>
+<code>$</code> at the end of a regex means match at end of line</li>
+<li>
+<code>.</code> is the match-all (any single character) wildcard</li>
+<li>
+<code>?</code> quantifies previous character or group as occurring
+zero or one time</li>
+<li>
+<code>*</code> quantifies previous character or group as occurring
+zero or more times</li>
+<li>
+<code>+</code> quantifies previous character or group as occurring
+one or more times</li>
+<li>
+<code>{n,m}</code> quantifies previous character or group as
+occurring between n and m times</li>
+<li>Quantifiers are greedy- will always match longest possible fit.</li>
+</ul></section><section id="04-egrep-charclasses"><h2 class="section-heading"><a href="04-egrep-charclasses.html">Pattern matching with grep -E, part 2</a></h2>
+<hr class="half-width">
+<ul>
+<li>grep in Extended Regex mode has a number of predefined character
+classes:</li>
+<li><code>[:alpha:]  [:alnum:]  [:digit:]  [:upper:]  [:lower:]  [:punct:]  [:space:]</code></li>
+<li>and escape-character enabled shorthand character classes and
+anchors:</li>
+<li>
+<code>\\w</code> : Word character [a-zA-Z0-9] OR a _
+(underscore)</li>
+<li>
+<code>\\W</code> : <code>[^\\w]</code> Inverse of \w, any non-word
+character</li>
+<li>
+<code>\\s</code> : Spaces, tabs, in some contexts new-lines</li>
+<li>
+<code>\\S</code> : <code>[^\\s]</code> Inverse of \s, any non-space
+character</li>
+<li>
+<code>\\b</code> : Boundary between adjacent word and space,
+0-length anchor</li>
+<li>
+<code>\\B</code> : <code>[^\\b]</code> In the middle of a word or
+multiple spaces, 0-length anchor</li>
+<li>
+<code>\\&lt;</code> : Boundary at <em>start</em> of word between
+word and space, 0-length anchor</li>
+<li>
+<code>\\&gt;</code> : Boundary at <em>end</em> of word between word
+and space, 0-length anchor</li>
+<li>You can refer back to an exact copy of a matched (group) using \1,
+\2, etc..</li>
 </ul></section>
 </div>
     </main>
@@ -349,8 +472,8 @@ directed matching.</li>
   "url": "https://csiro-data-school.github.io/regex-24/instructor/key-points.html",
   "identifier": "https://csiro-data-school.github.io/regex-24/instructor/key-points.html",
   "dateCreated": "2024-10-21",
-  "dateModified": "2024-10-22",
-  "datePublished": "2024-10-22"
+  "dateModified": "2024-10-23",
+  "datePublished": "2024-10-23"
 }
 
   </script><script>
