@@ -19,6 +19,7 @@ exercises: 45
 
 You may have used the command 'grep' before, which allows you to search for a matching string.
 It may be given a file name, to make it search within a file:  
+
 ~~~bash
 grep 'react' wordplay1.txt
 ~~~
@@ -29,7 +30,8 @@ trees   shelf   amused  reactive        sheet
 relation        reacting        handsome        ashamed
 ~~~
   
-Or it can search piped output from another command:
+Or it can search piped output from another command:  
+
 ~~~bash
 echo "Hello Andrew, you are Andrew?" | grep -o "Andrew"
 ~~~
@@ -54,7 +56,8 @@ commands later, and basically the same as most other implementations of regular 
 ## '\|' for matching this or that
 
 Like in the 'if' statements of most programming languages, the pipe character acts as an OR,
-allowing matching to any of the listed options.
+allowing matching to any of the listed options.  
+
 ~~~bash
 grep -E 'boat|bolt|bell' wordplay1.txt 
 ~~~
@@ -68,6 +71,7 @@ exclusive       color   harbor  boat    bedroom
 
 Round brackets may be used to group terms together. This grouping has multiple uses, as you'll
 see as we continue, but one is to group OR options together.  E.g.:  
+
 ~~~bash
 grep -E 'b(oat|olt|ell)' wordplay1.txt 
 ~~~
@@ -79,7 +83,8 @@ exclusive       color   harbor  boat    bedroom
 ~~~
   
 
-Consider the following:
+Consider the following:  
+
 ~~~bash
 echo "ABC" | grep -E -o '(A|B)C'
 ~~~
@@ -105,7 +110,7 @@ Only the B met this criteria.
 :::::::::::::::::::::::: solution  
 
 ## Solution
->
+  
 ~~~bash
 grep -E 'corn|cow' wordplay1.txt
 grep -E -w 'corn|cow' wordplay1.txt
@@ -113,7 +118,6 @@ grep -E 'reaction|reactive' wordplay1.txt
 grep -E 'reacti(on|ve)' wordplay1.txt
 ~~~
   
-
 :::::::::::::::::::::::::::::::::  
 :::::::::::::::::::::::::::::::::::::::::::::::  
   
@@ -126,7 +130,8 @@ This may sound familiar...
 Use of square brackets \[ *list* \] allows matching to a single character, 
 where that character has to match any of the options listed between the brackets.
 The brackets may contain a list, or a range, or a mix of both. 
-For example, to match any one digit from 0 to 9, the following are equivalent:
+For example, to match any one digit from 0 to 9, the following are equivalent:  
+
 ~~~bash
 [0123456789]
 [0-9]
@@ -134,20 +139,22 @@ For example, to match any one digit from 0 to 9, the following are equivalent:
 ~~~
   
 
-Ranges work for alphabet characters too. The following are equivalent:
+Ranges work for alphabet characters too. The following are equivalent:  
+
 ~~~bash
 [ABCDEFG]
 [A-G]
 ~~~
   
 
-Important: as always on a Unix shell, case matters!  A list of all alphanumeric characters is:
+Important: as always on a Unix shell, case matters!  A list of all alphanumeric characters is:  
+
 ~~~bash
 [a-zA-Z0-9]
 ~~~
   
+Example:  
 
-Example:
 ~~~bash
 echo "bog bag cog cot tog log lag" | grep -E -o '[a-z]og'
 ~~~
@@ -159,8 +166,8 @@ tog
 log
 ~~~
   
+Example:  
 
-Example:
 ~~~bash
 echo "1952 1986 2003 1995 2018" | grep -E -o '20[0-9][0-9]'
 ~~~
@@ -200,7 +207,8 @@ grep -E -w -o -i '[a-z]oat' wordplay1.txt
 When used within square brackets, a '^' means "NOT". 
 For example '[^ABC]' would match any one character that *wasn't* A or B or C.
 
-Example:
+Example:  
+
 ~~~bash
 echo "bog bag cog cot tog log lag" | grep -E -o '[^b][a-z]g'
 ~~~
@@ -222,7 +230,7 @@ lag
 :::::::::::::::::::::::: solution  
 
 ## Solution
->
+
 ~~~bash
 grep -E -w -o '[^bg]oat' wordplay1.txt
 ~~~
@@ -237,7 +245,8 @@ The '^' symbol has another use.  When placed at the start of a regex pattern, it
 pattern such that it must match from the start of a line.  
 Similarly, a '$', when placed at the end of a regex pattern, anchors the pattern such that it
 must match up to the end of a line.  
-Consider the following examples demonstrating the effect:
+Consider the following examples demonstrating the effect:  
+
 ~~~bash
 grep -E 'repeat' wordplay1.txt
 ~~~
@@ -264,17 +273,16 @@ grep -E 'repeat$' wordplay1.txt
 sheet   accessible      word    enthusiastic    repeat
 ~~~
   
-
 There will be more use for these anchors when we get into more complex patterns with wildcards.
 
-
-
+  
 ## '.' is the match-anything regex wildcard
 
 Speaking of, the match-anything wildcard (any single character) for regular expressions 
 is a period, '.'
 
-Consider:
+Consider:  
+
 ~~~bash
 grep -E -o '.oat' wordplay1.txt
 ~~~
@@ -311,7 +319,8 @@ Symbol(s) | Effect
 {,m} | Repeated at most 'm' times
 
 
-For example, what if we wanted to search for 'colour' but maybe it had US spelling?
+For example, what if we wanted to search for 'colour' but maybe it had US spelling?  
+
 ~~~bash
 grep -E 'colou?r' wordplay1.txt
 ~~~
@@ -323,7 +332,8 @@ exclusive       color   harbor  boat    bedroom
 Here the '?' modifier let the preceeding 'u' match either one time OR zero times.
 
 
-Lets find all words from our words file that are at least 12 letters long:
+Lets find all words from our words file that are at least 12 letters long:  
+
 ~~~bash
 grep -E -o '[a-z]{12,}' wordplay1.txt 
 ~~~
@@ -374,7 +384,7 @@ without further specific context around it.
 :::::::::::::::::::::::: solution  
 
 ## Solution
->
+  
 ~~~bash
 grep -E -o '^c.+' wordplay1.txt
 grep -E -o '^c[a-z]+' wordplay1.txt
@@ -389,7 +399,8 @@ grep -E -o '(out)?stand(ing)?' wordplay1.txt
 
 What if we wanted to match a date, and didn't know if the year would be 2 digits or 4?
 Our pattern for a date is "a digit, from 0-9, either one or two of them, then a forward slash,
-then a digit, either one or two of them, then either 2 digits OR 4 digits." 
+then a digit, either one or two of them, then either 2 digits OR 4 digits."  
+
 ~~~bash
 echo "11/06/91  not/a/date  5/9/2018" | grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})'
 ~~~
@@ -401,7 +412,8 @@ echo "11/06/91  not/a/date  5/9/2018" | grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]
   
 
 Alternatively, if we were sure about the sensibleness of the contents we were searching, 
-we may get away with just:
+we may get away with just:  
+  
 ~~~bash
 echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 ~~~
