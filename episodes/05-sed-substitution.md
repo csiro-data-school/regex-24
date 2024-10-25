@@ -321,15 +321,15 @@ sed -E 's/(\S+)\s+(\w+)/>\1\n\2/' dnaSequences.txt | sed -E 's/(\w{20})/\1\n/g'
 
 Have another look at 'namesndates.txt' (```cat namesndates.txt```)
   
-A number of typos and inconsistencies were made when adding rows to 'namesndates.txt':
-1. One row has a name written as "surname, firstname", instead of "firstname surname".
-2. One row has a date written in "dd-mm-yyyy" format instead of "dd/mm/yyyy" format.
-3. One row is comma-separated, while the rest are tab-separated.
-4. Some rows have multiple spaces, or a mix of tabs and spaces, in place of just single tabs.
-(```cat -T namesndates.txt``` can help distinguish tabs from spaces)
-  
-Using multiple piped sed substitutions, can you correct all of these mistakes?
+A number of typos and inconsistencies were made when adding rows to 'namesndates.txt':  
+1. One row has a name written as "surname, firstname", instead of "firstname surname".  
+2. One row has a date written in "dd-mm-yyyy" format instead of "dd/mm/yyyy" format.  
+3. One row is comma-separated, while the rest are tab-separated.  
+4. Some rows have multiple spaces, or a mix of tabs and spaces, in place of just single tabs.  
+(```cat -T namesndates.txt``` can help distinguish tabs from spaces)  
 
+Using multiple piped sed substitutions, can you correct all of these mistakes?  
+  
 
 :::::::::::::::::::::::: solution  
 
@@ -337,9 +337,9 @@ Using multiple piped sed substitutions, can you correct all of these mistakes?
   
 ~~~bash
 sed -E 's/^(\w+), (\w+)/\2 \1/' namesndates.txt | \
-sed -E 's;([0-9]{2})-([0-9]{2})-([0-9]{4});\1/\2/\3;' | \
-sed -E 's/,/\t/g' | \
-sed -E 's/\s{2,}/\t/g' > namesndates-FIXED.txt
+  sed -E 's;([0-9]{2})-([0-9]{2})-([0-9]{4});\1/\2/\3;' | \
+  sed -E 's/,/\t/g' | \
+  sed -E 's/\s{2,}/\t/g' > namesndates-FIXED.txt
 ~~~
 
 :::::::::::::::::::::::::::::::::  
@@ -347,19 +347,24 @@ sed -E 's/\s{2,}/\t/g' > namesndates-FIXED.txt
   
 
 
+::::::::::::::::::::::::::::::::::::: callout
+
+## Prototyping solutions
+
 Tips for turning longer complex strings into regular expression substitutions:  
-1. Start by copying a real example of a whole string into your pattern section.
-2. Add escape back slashes to any forward slashes, literal brackets, etc., as necessary.
-3. "Circle" the parts of the string you'd like to separately retain, with round brackets.
-4. Write out your replacement pattern, using back-reference to what you circled.
+1. Start by copying a real example of a whole string into your pattern section.  
+2. Add escape back slashes to any forward slashes, literal brackets, etc., as necessary.  
+3. "Circle" the parts of the string you'd like to separately retain, with round brackets.  
+4. Write out your replacement pattern, using back-reference to what you circled.  
 5. At this stage, the substitution should work, but only for the specific real example string
-that you've started with.
+that you've started with.  
 6. Finally, start abstracting your search pattern, replacing parts of your example string with 
 wild-cards or character-classes as needed, to strike the balance between specificity and
-ambiguity required to match all that you want and not all that you don't want.
+ambiguity required to match all that you want and not all that you don't want.  
+  
+:::::::::::::::::::::::::::::::::::::::::::::::
 
-
-
+  
 ::::::::::::::::::::::::::::::::::::: challenge  
 
 ## Try it - information from file names

@@ -402,7 +402,8 @@ Our pattern for a date is "a digit, from 0-9, either one or two of them, then a 
 then a digit, either one or two of them, then either 2 digits OR 4 digits."  
 
 ~~~bash
-echo "11/06/91  not/a/date  5/9/2018" | grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})'
+echo "11/06/91  not/a/date  5/9/2018" | \
+  grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]{2}|[0-9]{4})'
 ~~~
   
 ~~~output
