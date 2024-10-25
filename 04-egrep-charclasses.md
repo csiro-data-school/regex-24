@@ -59,11 +59,11 @@ The shorthand symbols available are:
 Written as | Equivalent to
 ----|----
 \\w | "Word" character [a-zA-Z0-9] OR a _ (underscore)
-\\W | [^\\w] Inverse of \\w, any non-"word" character
+\\W | [^\w] Inverse of \\w, any non-"word" character
 \\s | Spaces, tabs, in some contexts new-lines
-\\S | [^\\s] Inverse of \\s, any non-space character
+\\S | [^\s] Inverse of \\s, any non-space character
 \\b | Boundary between "words" and "spaces" (0-length)
-\\B | [^\\b] In the middle of a "word" or multiple "spaces" (0-length)
+\\B | [^\b] In the middle of a "word" or multiple "spaces" (0-length)
 \\< | Boundary at *start* of "word" between "words" and "spaces" (0-length)
 \\> | Boundary at *end* of "word" between "words" and "spaces" (0-length)
 
@@ -275,14 +275,14 @@ grep -E -o '([0-9]{2})/\1/[0-9]{4}' namesndates.txt
 - grep in Extended Regex mode has a number of predefined character classes:
 -  ``` [:alpha:]  [:alnum:]  [:digit:]  [:upper:]  [:lower:]  [:punct:]  [:space:] ``` 
 - and escape-character enabled shorthand character classes and anchors:
--  ``` \\w ``` : Word character [a-zA-Z0-9] OR a _ (underscore)
--  ``` \\W ``` : ```[^\\w]``` Inverse of \\w, any non-word character
--  ``` \\s ``` : Spaces, tabs, in some contexts new-lines
--  ``` \\S ``` : ```[^\\s]``` Inverse of \\s, any non-space character
--  ``` \\b ``` : Boundary between adjacent word and space, 0-length anchor
--  ``` \\B ``` : ```[^\\b]``` In the middle of a word or multiple spaces, 0-length anchor
--  ``` \\< ``` : Boundary at *start* of word between word and space, 0-length anchor
--  ``` \\> ``` : Boundary at *end* of word between word and space, 0-length anchor
+-  ``` \w ``` : Word character [a-zA-Z0-9] OR a _ (underscore)
+-  ``` \W ``` : ```[^\w]``` Inverse of \\w, any non-word character
+-  ``` \s ``` : Spaces, tabs, in some contexts new-lines
+-  ``` \S ``` : ```[^\s]``` Inverse of \\s, any non-space character
+-  ``` \b ``` : Boundary between adjacent word and space, 0-length anchor
+-  ``` \B ``` : ```[^\b]``` In the middle of a word or multiple spaces, 0-length anchor
+-  ``` \< ``` : Boundary at *start* of word between word and space, 0-length anchor
+-  ``` \> ``` : Boundary at *end* of word between word and space, 0-length anchor
 - You can refer back to an exact copy of a matched (group) using \\1, \\2, etc..
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
