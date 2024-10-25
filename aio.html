@@ -2134,7 +2134,7 @@ line.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2221,7 +2221,7 @@ retaining everything between</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2272,7 +2272,7 @@ dd/mm/yyyy format, into yymmdd format. E.g. change 23/08/2012 into
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <blockquote>
 <div class="codewrapper sourceCode" id="cb24">
@@ -2315,7 +2315,7 @@ multiple lines?</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2357,7 +2357,7 @@ mistakes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2437,7 +2437,7 @@ Sample4 Rep2    24hours sun     s4-R2_24h-sun.fasta     /path/to/my/data/folder2
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2751,7 +2751,7 @@ the fields in the input file.<br>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2871,23 +2871,34 @@ package:</p>
 <span><span class="kw">library</span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></span></code></pre>
 </div>
 <p>The grep equivalent in ‘stringr’ is <code>str_detect</code>. It’s
-intended for use in searching vectors of strings.<br><code>str_detect( string.vector, 'pattern' )</code><br>
-Basic use returns a list of TRUE/FALSE for which vector entries matched
-the search pattern.</p>
-<p>Note that you’ll need to use double-backslashes in place of any
-single backslash in R.</p>
+intended for use in searching vectors of strings.</p>
+<p><code>str_detect( string.vector, 'pattern' )</code></p>
+<p>Basic use returns a list of TRUE/FALSE for which vector entries
+matched the search pattern.</p>
+<p><strong>Note that you’ll need to use double-backslashes in place of
+any single backslash in R.</strong></p>
 <p>For example, find words where the same letter is repeated
-consecutively:<br>
-~<del>r words &lt;- c(“apple”, “banana”, “carrot”) str_detect( words,
-‘(\w)\1’ )</del>~</p>
+consecutively:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">words</span> <span class="op">&lt;-</span> <span class="fu">c</span><span class="op">(</span><span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"carrot"</span><span class="op">)</span></span>
+<span><span class="fu">str_detect</span><span class="op">(</span> <span class="va">words</span>, <span class="st">'(\\w)\\1'</span> <span class="op">)</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>[1]  TRUE FALSE  TRUE</code></pre>
 </div>
 <p>Applying the output of str_detect back to the original string vector,
-as indices, allows access to the actual matched entries: ~<del>r words[
-str_detect( words, ‘(\w)\1’ ) ]</del>~</p>
+as indices, allows access to the actual matched entries:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">words</span><span class="op">[</span> <span class="fu">str_detect</span><span class="op">(</span> <span class="va">words</span>, <span class="st">'(\\w)\\1'</span> <span class="op">)</span> <span class="op">]</span></span></code></pre>
+</div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2900,7 +2911,7 @@ column (such as mutate()).</p>
 <p>For the next example, we’re going to make use of the ‘stringr’
 package coming pre-loaded with a longer list of words, provided exactly
 for demonstrations like this, named ‘fruit’. Check it out:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2908,7 +2919,7 @@ for demonstrations like this, named ‘fruit’. Check it out:</p>
 <span><span class="fu">length</span><span class="op">(</span><span class="va">fruit</span><span class="op">)</span></span></code></pre>
 </div>
 <p>First we’ll convert the fruit vector into a data frame:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2917,7 +2928,7 @@ for demonstrations like this, named ‘fruit’. Check it out:</p>
 </div>
 <p>We can then add a new column to the data frame, which is the result
 of using ‘str_detect’ to find our repeated letter pattern:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2944,7 +2955,7 @@ of using ‘str_detect’ to find our repeated letter pattern:</p>
 </div>
 <p>Another approach is to use the ‘filter’ function to reduce the data
 frame to only matching rows:</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2971,13 +2982,14 @@ frame to only matching rows:</p>
 </div>
 <hr>
 <p>Substitution in R is enabled through the ‘str_replace’ or
-‘str_replace_all’ functions.<br><code>str_replace( string.vector, 'pattern', 'replacement' )</code><br>
-These functions will complete substitutions in all matching entries in a
-string vector. The difference is that ‘str_replace_all’ will also
+‘str_replace_all’ functions.</p>
+<p><code>str_replace( string.vector, 'pattern', 'replacement' )</code></p>
+<p>These functions will complete substitutions in all matching entries
+in a string vector. The difference is that ‘str_replace_all’ will also
 perform greedy matching and replacing within individual vector entries,
 where ‘str_replace’ will only replace the first match in each vector
 entry. The functions return the modified string vector.</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2990,7 +3002,7 @@ entry. The functions return the modified string vector.</p>
 </div>
 <p>And again, these functions may be combined with data frame use too.
 For example:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
