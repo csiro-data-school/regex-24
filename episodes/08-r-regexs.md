@@ -38,12 +38,15 @@ library(tidyverse)
 ~~~
   
 The grep equivalent in 'stringr' is `str_detect`. It's intended for use in searching vectors of strings.  
+
 ```str_detect( string.vector, 'pattern' )```  
+
 Basic use returns a list of TRUE/FALSE for which vector entries matched the search pattern.  
   
-Note that you'll need to use double-backslashes in place of any single backslash in R.  
+**Note that you'll need to use double-backslashes in place of any single backslash in R.**  
   
 For example, find words where the same letter is repeated consecutively:  
+
 ~~~r
 words <- c("apple", "banana", "carrot")
 str_detect( words, '(\\w)\\1' )
@@ -54,7 +57,8 @@ str_detect( words, '(\\w)\\1' )
 ~~~
 
 
-Applying the output of str_detect back to the original string vector, as indices, allows access to the actual matched entries:
+Applying the output of str_detect back to the original string vector, as indices, allows access to the actual matched entries:  
+
 ~~~r
 words[ str_detect( words, '(\\w)\\1' ) ]
 ~~~
@@ -132,9 +136,12 @@ framed_fruit %>%
   
   
 ---
+  
 
 Substitution in R is enabled through the 'str_replace' or 'str_replace_all' functions.  
+
 ```str_replace( string.vector, 'pattern', 'replacement' )```  
+  
 These functions will complete substitutions in all matching entries in a string vector. 
 The difference is that 'str_replace_all' will also perform greedy matching and replacing within
 individual vector entries, where 'str_replace' will only replace the first match in each vector
