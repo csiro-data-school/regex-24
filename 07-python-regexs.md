@@ -105,16 +105,6 @@ print(newstring)
 '123-Four-Five'
 ~~~
   
-::::::::::::::::::::::::::::::::::::: callout
-
-## RE Manual
-  
-More reference for the Python 're' library may be found at: 
-https://docs.python.org/3/library/re.html
-
-:::::::::::::::::::::::::::::::::::::::::::  
-  
-
 ::::::::::::::::::::::::::::::::::::: challenge  
 
 ## Try it - Reformatting a file using Python
@@ -158,6 +148,16 @@ with open('namesndates_v2.txt') as inFile:
 :::::::::::::::::::::::::::::::::::::::::::::::  
   
   
+::::::::::::::::::::::::::::::::::::: callout
+
+## RE Manual
+  
+More reference for the Python 're' library may be found at: 
+https://docs.python.org/3/library/re.html
+
+:::::::::::::::::::::::::::::::::::::::::::  
+  
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Regular expressions through Python: 
