@@ -120,18 +120,23 @@ https://docs.python.org/3/library/re.html
 ## Try it - Reformatting a file using Python
 
 Write a Python script that reads through the file 'namesndates_v2.txt' and, for each line,
-rearranges it to the following format (using re.sub), and prints the result:  
-`month-year: surname,firstname @ place`  
+rearranges it (using re.sub) to the following format, and prints the result:  
+
+**`month-year: surname,firstname @ place`**  
   
 For example, the line...  
+
 `Neve Erindale   23/08/2012      20:57   Coombs`  
+
 ...should be printed as:  
-`08-2012: Erindale,Neve @ Coombs`
 
-Hints:
-1. `\t` may be used to match the tab characters used between the fields in the input file.
+`08-2012: Erindale,Neve @ Coombs`  
+
+  
+Hints:  
+1. `\t` may be used to match the tab characters used between the fields in the input file.  
 2. Basic Python file reading:  
-
+  
 ~~~python
 with open(filename) as inFile:
   for line in inFile:
