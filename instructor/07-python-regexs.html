@@ -466,13 +466,17 @@ we’ve learnt already.</p>
 <h3 class="callout-title">Try it - Reformatting a file using Python</h3>
 <div class="callout-content">
 <p>Write a Python script that reads through the file
-‘namesndates_v2.txt’ and, for each line, rearranges it to the following
-format (using re.sub), and prints the result:<br><code>month-year: surname,firstname @ place</code></p>
-<p>For example, the line…<br><code>Neve Erindale   23/08/2012      20:57   Coombs</code><br>
-…should be printed as:<br><code>08-2012: Erindale,Neve @ Coombs</code></p>
-<p>Hints: 1. <code>\t</code> may be used to match the tab characters
-used between the fields in the input file. 2. Basic Python file
-reading:</p>
+‘namesndates_v2.txt’ and, for each line, rearranges it (using re.sub) to
+the following format, and prints the result:</p>
+<p><strong><code>month-year: surname,firstname @ place</code></strong></p>
+<p>For example, the line…</p>
+<p><code>Neve Erindale   23/08/2012      20:57   Coombs</code></p>
+<p>…should be printed as:</p>
+<p><code>08-2012: Erindale,Neve @ Coombs</code></p>
+<p>Hints:<br>
+1. <code>\t</code> may be used to match the tab characters used between
+the fields in the input file.<br>
+2. Basic Python file reading:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
