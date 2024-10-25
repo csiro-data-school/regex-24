@@ -243,7 +243,7 @@ of listing longer options in a this-OR-that fashion will be visited again in pro
 ## Solution
   
 ~~~bash
-{%raw%}ls sample{{8..13},CD}.*{%endraw%}
+ls sample{{8..13},CD}.*
 ls sample{11,CD}.{csv,tab}
 ~~~  
   

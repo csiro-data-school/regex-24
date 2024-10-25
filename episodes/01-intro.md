@@ -87,7 +87,8 @@ be to understand how this works and to be able to implement similar effects your
 There have been numerous implementations of regular expressions, but the major common
 implementations available today all follow a mostly-consistent syntax, which is what we'll be 
 learning. So, for example, once you learn this regex syntax, you'll then be able to use it 
-within certain Unix command line utilities *and* in Python *and* in R!
+within certain Unix command line utilities *and* in Python *and* in R. It even works in most 
+text editors too!  
   
 
 ::::::::::::::::::::::::::::::::::::: keypoints 

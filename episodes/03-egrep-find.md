@@ -127,7 +127,7 @@ grep -E 'reacti(on|ve)' wordplay1.txt
 
 This may sound familiar...
 
-Use of square brackets \[ *list* \] allows matching to a single character, 
+Use of square brackets `[ *list* ]` allows matching to a single character, 
 where that character has to match any of the options listed between the brackets.
 The brackets may contain a list, or a range, or a mix of both. 
 For example, to match any one digit from 0 to 9, the following are equivalent:  
@@ -413,7 +413,7 @@ echo "11/06/91  not/a/date  5/9/2018" | grep -E -o '[0-9]{1,2}/[0-9]{1,2}/([0-9]
 
 Alternatively, if we were sure about the sensibleness of the contents we were searching, 
 we may get away with just:  
-  
+
 ~~~bash
 echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 ~~~
