@@ -277,6 +277,42 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-sed-substitution.html">5. Find... and replace! With sed.</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-texted-regexs.html">6. Regexs within text editors</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07-python-regexs.html">7. Python regular expressions</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -424,6 +460,42 @@ word and space, 0-length anchor</li>
 and space, 0-length anchor</li>
 <li>You can refer back to an exact copy of a matched (group) using \1,
 \2, etc..</li>
+</ul></section><section id="05-sed-substitution"><h2 class="section-heading"><a href="05-sed-substitution.html">Find... and replace! With sed.</a></h2>
+<hr class="half-width">
+<ul>
+<li><code>sed -E 's/pattern/replacement/'</code></li>
+<li>
+<code>'s/pattern/replacement/g'</code> - enables Greedy, replace-all
+mode.</li>
+<li>Use grouping () in pattern and back-reference \1 in
+replacement…</li>
+<li>… to rearrange or recontextualise parts of the matched input.</li>
+<li>Tips for writing complex substitutions:</li>
+<li>1- Start with a complete real example pasted as your pattern.</li>
+<li>2- Escape ‘\’ any forward slashes, literal brackets, etc., as
+necessary.</li>
+<li>3- Circle the parts to retain, with round brackets.</li>
+<li>4- Write your replacement rules, using back-references.</li>
+<li>5- Substitution should now work for your specific real example.</li>
+<li>6- Abstract pattern with wildcards, etc., to make ambiguous enough
+for all required cases.</li>
+</ul></section><section id="06-texted-regexs"><h2 class="section-heading"><a href="06-texted-regexs.html">Regexs within text editors</a></h2>
+<hr class="half-width">
+<ul>
+<li>Regular expression capabilities are incorporated in most modern text
+editors for find and replace.</li>
+</ul></section><section id="07-python-regexs"><h2 class="section-heading"><a href="07-python-regexs.html">Python regular expressions</a></h2>
+<hr class="half-width">
+<ul>
+<li>Regular expressions through Python:</li>
+<li><code>import re</code></li>
+<li><code>match = re.search(r'pattern', 'string')</code></li>
+<li>OR</li>
+<li><code>list = re.split(r'pattern', 'string')</code></li>
+<li>OR</li>
+<li><code>re.sub( r'pattern', r'replacement', 'string' )</code></li>
+<li>Reference: <a href="https://docs.python.org/3/library/re.html" class="external-link uri">https://docs.python.org/3/library/re.html</a>
+</li>
 </ul></section>
 </div>
     </main>
@@ -472,8 +544,8 @@ and space, 0-length anchor</li>
   "url": "https://csiro-data-school.github.io/regex-24/instructor/key-points.html",
   "identifier": "https://csiro-data-school.github.io/regex-24/instructor/key-points.html",
   "dateCreated": "2024-10-21",
-  "dateModified": "2024-10-23",
-  "datePublished": "2024-10-23"
+  "dateModified": "2024-10-25",
+  "datePublished": "2024-10-25"
 }
 
   </script><script>

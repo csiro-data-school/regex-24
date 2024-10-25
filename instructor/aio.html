@@ -277,6 +277,42 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-sed-substitution.html">5. Find... and replace! With sed.</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-texted-regexs.html">6. Regexs within text editors</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07-python-regexs.html">7. Python regular expressions</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -333,7 +369,7 @@
         
 <section id="aio-01-intro"><p>Content from <a href="01-intro.html">Regular Expressions: The pitch</a></p>
 <hr>
-<p>Last updated on 2024-10-21 |
+<p>Last updated on 2024-10-25 |
 
         <a href="https://github.com/csiro-data-school/regex-24/edit/main/episodes/01-intro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
@@ -434,7 +470,7 @@ the major common implementations available today all follow a
 mostly-consistent syntax, which is what we’ll be learning. So, for
 example, once you learn this regex syntax, you’ll then be able to use it
 within certain Unix command line utilities <em>and</em> in Python
-<em>and</em> in R!</p>
+<em>and</em> in R. It even works in most text editors too!</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -456,7 +492,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-shell-wildcards"><p>Content from <a href="02-shell-wildcards.html">Shell wildcards - a type of regex</a></p>
 <hr>
-<p>Last updated on 2024-10-23 |
+<p>Last updated on 2024-10-25 |
 
         <a href="https://github.com/csiro-data-school/regex-24/edit/main/episodes/02-shell-wildcards.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -544,7 +580,7 @@ range of 10-19.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -627,7 +663,7 @@ in a letter.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -679,7 +715,7 @@ E.g.:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -777,12 +813,12 @@ and CD.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">{%raw%}ls</span> sample<span class="dt">{{</span><span class="dv">8</span><span class="dt">..</span><span class="dv">13</span><span class="dt">}</span><span class="op">,</span><span class="dt">CD}</span>.<span class="pp">*</span>{%endraw%}</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">ls</span> sample<span class="dt">{{</span><span class="dv">8</span><span class="dt">..</span><span class="dv">13</span><span class="dt">}</span><span class="op">,</span><span class="dt">CD}</span>.<span class="pp">*</span></span>
 <span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="fu">ls</span> sample<span class="dt">{11</span><span class="op">,</span><span class="dt">CD}</span>.<span class="dt">{csv</span><span class="op">,</span><span class="dt">tab}</span></span></code></pre>
 </div>
 </div>
@@ -825,7 +861,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03-egrep-find"><p>Content from <a href="03-egrep-find.html">Pattern matching with grep -E, part 1</a></p>
 <hr>
-<p>Last updated on 2024-10-23 |
+<p>Last updated on 2024-10-25 |
 
         <a href="https://github.com/csiro-data-school/regex-24/edit/main/episodes/03-egrep-find.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -985,11 +1021,11 @@ only)</li>
 </h2>
 <hr class="half-width">
 <p>This may sound familiar…</p>
-<p>Use of square brackets <span class="math display">\[ *list* \]</span>
-allows matching to a single character, where that character has to match
-any of the options listed between the brackets. The brackets may contain
-a list, or a range, or a mix of both. For example, to match any one
-digit from 0 to 9, the following are equivalent:</p>
+<p>Use of square brackets <code>[ *list* ]</code> allows matching to a
+single character, where that character has to match any of the options
+listed between the brackets. The brackets may contain a list, or a
+range, or a mix of both. For example, to match any one digit from 0 to
+9, the following are equivalent:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1736,7 +1772,7 @@ first letter of every word.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1857,7 +1893,7 @@ are the same number.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1916,6 +1952,787 @@ and space, 0-length anchor</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</section></section><section id="aio-05-sed-substitution"><p>Content from <a href="05-sed-substitution.html">Find... and replace! With sed.</a></p>
+<hr>
+<p>Last updated on 2024-10-25 |
+
+        <a href="https://github.com/csiro-data-school/regex-24/edit/main/episodes/05-sed-substitution.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 120 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do we find and replace content using regex patterns?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Learn regex substitutions using sed.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="regex-substitution-syntax">Regex substitution syntax<a class="anchor" aria-label="anchor" href="#regex-substitution-syntax"></a>
+</h2>
+<hr class="half-width">
+<p>Regex substitutions allow you to use the pattern syntax we’ve learned
+so far to describe complex ‘find &amp; replace’ operations. For the
+following exercises we’ll be using the program ‘sed’, but the
+substitution syntax is common to other implementations too. It’s
+this:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="st">'s/pattern/replacement/'</span></span></code></pre>
+</div>
+<p>‘s’ for substitution. The ‘pattern’ component is as we’ve been using
+with ‘grep -E’ so far; the same concept and syntax, describing a pattern
+to be matched. The ‘replacement’ component is what will replace a match
+of the pattern.</p>
+<p>E.g. Substitute “hello” for “goodbye” would be:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="st">'s/hello/goodbye/'</span></span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="sed-for-regex-substitutions">Sed for regex substitutions<a class="anchor" aria-label="anchor" href="#sed-for-regex-substitutions"></a>
+</h2>
+<hr class="half-width">
+<p>‘sed’ is a Unix command line utility, name short for “stream editor”.
+It will parse text passed to it, from a file or piped input stream, and
+can perform various transformations to the text. It has many different
+capabilities, as can be found in the sed manual. Today we’ll just be
+playing with the regular expression substitution capability. We’ll be
+using ‘sed -E’, which enables the same “Extended Regular Expression”
+syntax as we’d been using with ‘grep -E’.</p>
+<p>There are a few ways to use it:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># Modify stream from another program, print result</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">other-command</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/pat/replace/'</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co"># Read input file, print contents with changes</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/pat/replace/'</span> inFile</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co"># Read input file, write contents with changes to another file</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/pat/replace/'</span> inFile <span class="op">&gt;</span> outFile</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co"># Read input file, write with changes to the same file (caution!)</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="at">-i</span> <span class="st">'s/pat/replace/'</span> file</span></code></pre>
+</div>
+<p>Example:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"hello Andrew"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/Andrew/Bob/'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>hello Bob</code></pre>
+</div>
+<p>All of our regex pattern capabilities still work:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"hello Andrew"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/A\w+/Bob/'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>hello Bob</code></pre>
+</div>
+<p>We replace the entirety of what we match:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"hello Andrew"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/.+/A whole new line/'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>A whole new line</code></pre>
+</div>
+<p>Only the first possible extended match is replaced:</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"hello Andrew"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/\w+/blah/'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>blah Andrew</code></pre>
+</div>
+<p>However, a greedy mode may be enabled which keeps looking for
+subsequent matches to replace, by adding a ‘g’ to the end of your
+substitution string:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"hello Andrew"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/\w+/blah/g'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>blah blah</code></pre>
+</div>
+<p>The replacement section is allowed to be empty too:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"hello    Andrew"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/\s+//g'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">helloAndrew</span></span></code></pre>
+</div>
+<div id="try-it-1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="try-it-1" class="callout-inner">
+<h3 class="callout-title">Try it 1</h3>
+<div class="callout-content">
+<p>Using <code>sed -E 's/ / /g' wordplay1.txt</code>…</p>
+<ol style="list-style-type: decimal">
+<li>Replace all vowels (a,e,i,o,u) with ‘oo’</li>
+<li>Replace all words longer than 4 characters with ‘blah’</li>
+<li>Replace an <em>entire line</em> if it has any words longer than 4
+characters with “had long words” (as a literal phrase)</li>
+<li>Insert “Some words:” (as a literal phrase) at the start of every
+line.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/[aeiou]/oo/g'</span> wordplay1.txt</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/\w{5,}/blah/g'</span> wordplay1.txt</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/.*\w{5,}.*/had long words/'</span> wordplay1.txt</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/^/Some words: /'</span> wordplay1.txt</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="making-use-of-back-references">Making use of back-references<a class="anchor" aria-label="anchor" href="#making-use-of-back-references"></a>
+</h2>
+<hr class="half-width">
+<p>Recall with grep we could “capture” or remember a part of a match by
+encasing it in round brackets ‘<span class="math inline">\(\)</span>’
+and then refer back to an exact copy of what was matched, using ‘\1’ for
+the first bracketed group, ‘\2’ for second bracketed group, etc.. Such
+back-references may also be used within the replacement section of a
+substitution. This is how we start doing more interesting find and
+replaces.</p>
+<p>For example, we could add an exclamation mark after every word:</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"hello Andrew"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/(\w+)/\1!/g'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>hello! Andrew!</code></pre>
+</div>
+<p>The back-reference is necessary, so that we can define the
+replacement as being “the same as what we matched, plus an exclamation
+mark.”</p>
+<p>Another example, we could swap every second word:</p>
+<div class="codewrapper sourceCode" id="cb19">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"one two three four"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/(\w+) (\w+)/\2 \1/g'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>two one four three</code></pre>
+</div>
+<p>We separately capture two adjacent words, then in the replacement,
+refer back to them in reverse order.</p>
+<p>Remember that the entirety of a matched pattern is replaced. So if we
+do something like this, where a ‘.+’ matches the whole rest of the line,
+then the whole rest of the line is replaced.</p>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"one two three four"</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/(\w+) (\w+).+/\2 \1/g'</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>two one</code></pre>
+</div>
+<div id="try-it-2" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="try-it-2" class="callout-inner">
+<h3 class="callout-title">Try it 2</h3>
+<div class="callout-content">
+<p>Using <code>sed -E 's/ / /g' wordplay1.txt</code>…</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Replace all vowels (a,e,i,o,u) with two copies of that same
+vowel</li>
+<li>Switch the places of the first and second word on each line</li>
+<li>Switch the places of the first and last word on each line, while
+retaining everything between</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/([aeiou])/\1\1/g'</span> wordplay1.txt</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/^(\w+)\t(\w+)/\2\t\1/'</span> wordplay1.txt</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/^(\w+)(.+)\b(\w+)/\3\2\1/'</span> wordplay1.txt</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="forward-slashes" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="forward-slashes" class="callout-inner">
+<h3 class="callout-title">Forward slashes</h3>
+<div class="callout-content">
+<p>Note that, as a substitution pattern is bookended by forward slashes,
+there will be a conflict if you actually want to include a literal
+forward slash. There are two ways of handling this.<br>
+1. Escape your literal forward slash with a back slash, ensuring it acts
+as a literal character.<br><code>\/</code><br>
+2. Alternatively, you can actually use any other character to bookend
+the substitution! E.g.:<br><code>'s;pattern;replacement;'</code><br>
+or<br><code>'s#pattern#replacement#'</code><br>
+If doing this, choose a character that won’t otherwise appear in your
+substitution string and that doesn’t have any other special meaning.</p>
+</div>
+</div>
+</div>
+<div id="try-it---date-format-conversion" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="try-it---date-format-conversion" class="callout-inner">
+<h3 class="callout-title">Try it - date format conversion</h3>
+<div class="callout-content">
+<p>Complete the following, to convert dates in namesndates.txt from
+dd/mm/yyyy format, into yymmdd format. E.g. change 23/08/2012 into
+120823.<br><code>sed -E 's; ; ;' namesndates.txt</code></p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<blockquote>
+<div class="codewrapper sourceCode" id="cb24">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s;([0-9]{2})/([0-9]{2})/[0-9]{2}([0-9]{2});\3\2\1;'</span> namesndates.txt</span></code></pre>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<div id="try-it---make-a-fasta-file" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="try-it---make-a-fasta-file" class="callout-inner">
+<h3 class="callout-title">Try it - make a FASTA file</h3>
+<div class="callout-content">
+<p>DNA and RNA sequences are often represented in the “FASTA” format,
+which looks like:</p>
+<pre><code>&gt;seqID
+ATCGTACGTAGCTACGT</code></pre>
+<p>The file ‘dnaSequences.txt’ contains DNA sequences in a tab-separated
+format:</p>
+<pre><code>seqID    ATCGTACGTAGCTACGT</code></pre>
+<ol style="list-style-type: decimal">
+<li><p>Use sed to convert dnaSequences.txt sequences into a FASTA format
+representation. Hint: ‘\n’ may be used in the replacement pattern to
+insert a newline.</p></li>
+<li><p>Some sequences may be very long. Can you make it so that there’s
+never more than 20 characters per line, with longer sequences split over
+multiple lines?</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb27">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/(\S+)\s+(\w+)/&gt;\1\n\2/'</span> dnaSequences.txt</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/(\S+)\s+(\w+)/&gt;\1\n\2/'</span> dnaSequences.txt <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/(\w{20})/\1\n/g'</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="try-it---fixing-a-file" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="try-it---fixing-a-file" class="callout-inner">
+<h3 class="callout-title">Try it - Fixing a file</h3>
+<div class="callout-content">
+<p>Have another look at ‘namesndates.txt’
+(<code>cat namesndates.txt</code>)</p>
+<p>A number of typos and inconsistencies were made when adding rows to
+‘namesndates.txt’: 1. One row has a name written as “surname,
+firstname”, instead of “firstname surname”. 2. One row has a date
+written in “dd-mm-yyyy” format instead of “dd/mm/yyyy” format. 3. One
+row is comma-separated, while the rest are tab-separated. 4. Some rows
+have multiple spaces, or a mix of tabs and spaces, in place of just
+single tabs. (<code>cat -T namesndates.txt</code> can help distinguish
+tabs from spaces)</p>
+<p>Using multiple piped sed substitutions, can you correct all of these
+mistakes?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
+  <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
+</button>
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb28">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/^(\w+), (\w+)/\2 \1/'</span> namesndates.txt <span class="kw">|</span> <span class="dt">\</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s;([0-9]{2})-([0-9]{2})-([0-9]{4});\1/\2/\3;'</span> <span class="kw">|</span> <span class="dt">\</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/,/\t/g'</span> <span class="kw">|</span> <span class="dt">\</span></span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/\s{2,}/\t/g'</span> <span class="op">&gt;</span> namesndates-FIXED.txt</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Tips for turning longer complex strings into regular expression
+substitutions:<br>
+1. Start by copying a real example of a whole string into your pattern
+section. 2. Add escape back slashes to any forward slashes, literal
+brackets, etc., as necessary. 3. “Circle” the parts of the string you’d
+like to separately retain, with round brackets. 4. Write out your
+replacement pattern, using back-reference to what you circled. 5. At
+this stage, the substitution should work, but only for the specific real
+example string that you’ve started with. 6. Finally, start abstracting
+your search pattern, replacing parts of your example string with
+wild-cards or character-classes as needed, to strike the balance between
+specificity and ambiguity required to match all that you want and not
+all that you don’t want.</p>
+<div id="try-it---information-from-file-names" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="try-it---information-from-file-names" class="callout-inner">
+<h3 class="callout-title">Try it - information from file names</h3>
+<div class="callout-content">
+<p>‘fileExample1.txt’ contains the input text from the first regex
+example in the intro of this course. Can you recreate that
+transformation?<br>
+Convert this list of files (fileExample1.txt)…</p>
+<pre><code>/path/to/my/data/folder1/s1-R1_6h-shade.fasta
+/path/to/my/data/folder1/s2-R1_6h-sun.fasta
+/path/to/my/data/folder1/s3-R1_24h-shade.fasta
+/path/to/my/data/folder1/s4-R1_24h-sun.fasta
+/path/to/my/data/folder2/s1-R2_6h-shade.fasta
+/path/to/my/data/folder2/s2-R2_6h-sun.fasta
+/path/to/my/data/folder2/s3-R2_24h-shade.fasta
+/path/to/my/data/folder2/s4-R2_24h-sun.fasta</code></pre>
+<p>…into this table of sample information:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Sample1 Rep1    6hours  shade   s1-R1_6h-shade.fasta    /path/to/my/data/folder1/
+Sample2 Rep1    6hours  sun     s2-R1_6h-sun.fasta      /path/to/my/data/folder1/
+Sample3 Rep1    24hours shade   s3-R1_24h-shade.fasta   /path/to/my/data/folder1/
+Sample4 Rep1    24hours sun     s4-R1_24h-sun.fasta     /path/to/my/data/folder1/
+Sample1 Rep2    6hours  shade   s1-R2_6h-shade.fasta    /path/to/my/data/folder2/
+Sample2 Rep2    6hours  sun     s2-R2_6h-sun.fasta      /path/to/my/data/folder2/
+Sample3 Rep2    24hours shade   s3-R2_24h-shade.fasta   /path/to/my/data/folder2/
+Sample4 Rep2    24hours sun     s4-R2_24h-sun.fasta     /path/to/my/data/folder2/</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution6" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
+  <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
+</button>
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb31">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="dt">\</span></span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="st">'s/^(.+\/)(s([0-9]+)-R([0-9]+)_([0-9]+)h-(\w+)\.fasta)/Sample\3\tRep\4\t\5hours\t\6\t\2\t\1/'</span> <span class="dt">\</span></span>
+<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a>    fileExample1.txt</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li><code>sed -E 's/pattern/replacement/'</code></li>
+<li>
+<code>'s/pattern/replacement/g'</code> - enables Greedy, replace-all
+mode.</li>
+<li>Use grouping () in pattern and back-reference \1 in
+replacement…</li>
+<li>… to rearrange or recontextualise parts of the matched input.</li>
+<li>Tips for writing complex substitutions:</li>
+<li>1- Start with a complete real example pasted as your pattern.</li>
+<li>2- Escape ‘\’ any forward slashes, literal brackets, etc., as
+necessary.</li>
+<li>3- Circle the parts to retain, with round brackets.</li>
+<li>4- Write your replacement rules, using back-references.</li>
+<li>5- Substitution should now work for your specific real example.</li>
+<li>6- Abstract pattern with wildcards, etc., to make ambiguous enough
+for all required cases.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-06-texted-regexs"><p>Content from <a href="06-texted-regexs.html">Regexs within text editors</a></p>
+<hr>
+<p>Last updated on 2024-10-25 |
+
+        <a href="https://github.com/csiro-data-school/regex-24/edit/main/episodes/06-texted-regexs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can we invoke regular expressions within certain text
+editors?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Introduce regex substitutions implemented in text editors,
+e.g. Nano, VSCode, Notepad++, etc…</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Regular expressions, for both searching and substituting, with all
+the capabilities we’ve looked at today, are fully implemented in many
+modern text editors.</p>
+<p>For example, on Windows: Visual Studio Code, Notepad++, Sublime
+Text…</p>
+<p>Patterns follow all the same syntax you’ve learnt using grep and sed.
+However, you’ll usually find that the following patterns work that
+didn’t work with Grep:</p>
+<table class="table">
+<thead><tr class="header">
+<th>Written as</th>
+<th>Equivalent to</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>\d</td>
+<td>[0-9] A digit</td>
+</tr>
+<tr class="even">
+<td>\D</td>
+<td>[^0-9] Not a digit</td>
+</tr>
+<tr class="odd">
+<td>\t</td>
+<td>A tab character</td>
+</tr>
+<tr class="even">
+<td>\n</td>
+<td>A newline, if program supports multi-line matching</td>
+</tr>
+</tbody>
+</table>
+<p>In some text editors, for example VSCode, back-reference variables
+are referred to with a ‘$’ sign instead of a backslash. E.g. instead of
+\1 and \2, you use $1 and $2. Experiment with your favourite text editor
+to see which it expects.</p>
+<p>In Nano, find and replace options are listed at the bottom of the
+screen as <code>^W Where Is</code> and <code>^\ Replace</code>
+respectively, which in Windows corresponds to <code>Ctrl+W</code> for
+Find or <code>Ctrl+\</code> for Replace.<br>
+Once either is enabled a new option for toggling Regex mode on or off is
+listed at the bottom: <code>M-R Reg.exp.</code>. This command (Meta+R)
+corresponds to <code>Alt+R</code> on Windows.<br>
+Toggling Regex mode on will change the prompt from <code>Search:</code>
+to <code>Search [Regexp]:</code>.<br>
+With Regex mode on, all the same syntax from grep and sed should work,
+including using \1, \2, etc. to reference groups captured by round
+brackets when doing a replace.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Regular expression capabilities are incorporated in most modern text
+editors for find and replace.</li>
+</ul>
+</div>
+</div>
+</div></section><section id="aio-07-python-regexs"><p>Content from <a href="07-python-regexs.html">Python regular expressions</a></p>
+<hr>
+<p>Last updated on 2024-10-25 |
+
+        <a href="https://github.com/csiro-data-school/regex-24/edit/main/episodes/07-python-regexs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can we invoke regular expressions using Python?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Introduce regex capabilities in Python.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Regular expressions, with search, replace and other capabilities, are
+available in through Python through the ‘re’ library. E.g.
+<code>import re</code>.</p>
+<p>Patterns follow all the same syntax you’ve learnt using grep and sed.
+However, you’ll usually find that the following patterns work that
+didn’t work with Grep:</p>
+<table class="table">
+<thead><tr class="header">
+<th>Written as</th>
+<th>Equivalent to</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>\d</td>
+<td>[0-9] A digit</td>
+</tr>
+<tr class="even">
+<td>\D</td>
+<td>[^0-9] Not a digit</td>
+</tr>
+<tr class="odd">
+<td>\t</td>
+<td>A tab character</td>
+</tr>
+<tr class="even">
+<td>\n</td>
+<td>A newline</td>
+</tr>
+</tbody>
+</table>
+<p>Python regexs, using the ‘re’ library, are implemented through
+functions, where search patterns and strings are given as function
+arguments.</p>
+<section><h2 class="section-heading" id="searching">Searching<a class="anchor" aria-label="anchor" href="#searching"></a>
+</h2>
+<hr class="half-width">
+<p>The grep equivalent is the function re.search().<br><code>match = re.search( pattern, string )</code><br>
+The returned match object looks “true” if there was a match and has
+functions for interrogating aspects of the match, for example individual
+bracketed groups matched and span range of matched parts.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>myString <span class="op">=</span> <span class="st">'word1 1234 word2'</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>match <span class="op">=</span> re.search(<span class="vs">r'\b(\d+) (\w+)'</span>, myString)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="cf">if</span> match:</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>    <span class="bu">print</span>(match.group(<span class="dv">0</span>))</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>    <span class="bu">print</span>(match.span(<span class="dv">0</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>    <span class="bu">print</span>(match.group(<span class="dv">1</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>    <span class="bu">print</span>(match.group(<span class="dv">2</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No Match"</span>)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>1234 word2
+(6, 16)
+1234
+word2</code></pre>
+</div>
+<p>Note the ‘r’ in front of the search pattern,
+<code>r'\b(\d+) (\w+)'</code>. This enables the pattern string to be
+passed to the re function in its literal form, which prevents
+backslashes being being interpreted as escapes too early,
+<em>before</em> the function looks at it. Without the preceeding ‘r’,
+double-backslashes would be necessary.<br>
+E.g. <code>'\\b(\\d+) (\\w+)'</code></p>
+</section><section><h2 class="section-heading" id="splitting">Splitting<a class="anchor" aria-label="anchor" href="#splitting"></a>
+</h2>
+<hr class="half-width">
+<p>A neat ‘re’ feature is splitting of a string into an array of
+substrings, using a regex as a delimiter, instead of just a literal
+comma or tab or space, etc.. With this functionality, you can, for
+example, split up a line into individual words, using a regex “anything
+that’s not a word” as the delimiter for the split.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>listOfWords <span class="op">=</span> re.split(<span class="vs">r'\W+'</span>, <span class="st">'word_1 $%^ 1234,word2-word3'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="bu">print</span>(listOfWords)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>['word_1', '1234', 'word2', 'word3']</code></pre>
+</div>
+</section><section><h2 class="section-heading" id="substituting">Substituting<a class="anchor" aria-label="anchor" href="#substituting"></a>
+</h2>
+<hr class="half-width">
+<p>Substitution commands in Python ‘re’ take the form:<br><code>newstring = re.sub( pattern, replacement, string )</code><br>
+Again, both the pattern and replacement/back-reference syntax is as
+we’ve learnt already.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>oldstring <span class="op">=</span> <span class="st">'Four 123 Five'</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>newstring <span class="op">=</span> re.sub( <span class="vs">r'(\w+)\s+(\d+)\s+(\w+)'</span>, <span class="vs">r'\2-\1-\3'</span>, oldstring )</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="bu">print</span>(newstring)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="st">'123-Four-Five'</span></span></code></pre>
+</div>
+<div id="re-manual" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="re-manual" class="callout-inner">
+<h3 class="callout-title">RE Manual</h3>
+<div class="callout-content">
+<p>More reference for the Python ‘re’ library may be found at: <a href="https://docs.python.org/3/library/re.html" class="external-link uri">https://docs.python.org/3/library/re.html</a></p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Regular expressions through Python:</li>
+<li><code>import re</code></li>
+<li><code>match = re.search(r'pattern', 'string')</code></li>
+<li>OR</li>
+<li><code>list = re.split(r'pattern', 'string')</code></li>
+<li>OR</li>
+<li><code>re.sub( r'pattern', r'replacement', 'string' )</code></li>
+<li>Reference: <a href="https://docs.python.org/3/library/re.html" class="external-link uri">https://docs.python.org/3/library/re.html</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
 </section></section>
 </div>
     </main>
@@ -1964,8 +2781,8 @@ any links that you are not going to use.
   "url": "https://csiro-data-school.github.io/regex-24/instructor/aio.html",
   "identifier": "https://csiro-data-school.github.io/regex-24/instructor/aio.html",
   "dateCreated": "2024-10-21",
-  "dateModified": "2024-10-23",
-  "datePublished": "2024-10-23"
+  "dateModified": "2024-10-25",
+  "datePublished": "2024-10-25"
 }
 
   </script><script>
