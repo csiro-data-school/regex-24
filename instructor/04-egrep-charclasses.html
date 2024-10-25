@@ -325,7 +325,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Pattern matching with grep -E, part 2</h1>
-        <p>Last updated on 2024-10-23 |
+        <p>Last updated on 2024-10-25 |
 
         <a href="https://github.com/csiro-data-school/regex-24/edit/main/episodes/04-egrep-charclasses.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -418,16 +418,15 @@ The shorthand symbols available are:</p>
 </tr></thead><tbody><tr class="odd"><td>\w</td>
 <td>“Word” character [a-zA-Z0-9] OR a _ (underscore)</td>
 </tr><tr class="even"><td>\W</td>
-<td>[^\\w] Inverse of \w, any non-“word” character</td>
+<td>[^\w] Inverse of \w, any non-“word” character</td>
 </tr><tr class="odd"><td>\s</td>
 <td>Spaces, tabs, in some contexts new-lines</td>
 </tr><tr class="even"><td>\S</td>
-<td>[^\\s] Inverse of \s, any non-space character</td>
+<td>[^\s] Inverse of \s, any non-space character</td>
 </tr><tr class="odd"><td>\b</td>
 <td>Boundary between “words” and “spaces” (0-length)</td>
 </tr><tr class="even"><td>\B</td>
-<td>[^\\b] In the middle of a “word” or multiple “spaces”
-(0-length)</td>
+<td>[^\b] In the middle of a “word” or multiple “spaces” (0-length)</td>
 </tr><tr class="odd"><td>\&lt;</td>
 <td>Boundary at <em>start</em> of “word” between “words” and “spaces”
 (0-length)</td>
@@ -679,27 +678,27 @@ classes:</li>
 <li>and escape-character enabled shorthand character classes and
 anchors:</li>
 <li>
-<code>\\w</code> : Word character [a-zA-Z0-9] OR a _
+<code>\w</code> : Word character [a-zA-Z0-9] OR a _
 (underscore)</li>
 <li>
-<code>\\W</code> : <code>[^\\w]</code> Inverse of \w, any non-word
+<code>\W</code> : <code>[^\w]</code> Inverse of \w, any non-word
 character</li>
 <li>
-<code>\\s</code> : Spaces, tabs, in some contexts new-lines</li>
+<code>\s</code> : Spaces, tabs, in some contexts new-lines</li>
 <li>
-<code>\\S</code> : <code>[^\\s]</code> Inverse of \s, any non-space
+<code>\S</code> : <code>[^\s]</code> Inverse of \s, any non-space
 character</li>
 <li>
-<code>\\b</code> : Boundary between adjacent word and space,
-0-length anchor</li>
+<code>\b</code> : Boundary between adjacent word and space, 0-length
+anchor</li>
 <li>
-<code>\\B</code> : <code>[^\\b]</code> In the middle of a word or
+<code>\B</code> : <code>[^\b]</code> In the middle of a word or
 multiple spaces, 0-length anchor</li>
 <li>
-<code>\\&lt;</code> : Boundary at <em>start</em> of word between
-word and space, 0-length anchor</li>
+<code>\&lt;</code> : Boundary at <em>start</em> of word between word
+and space, 0-length anchor</li>
 <li>
-<code>\\&gt;</code> : Boundary at <em>end</em> of word between word
+<code>\&gt;</code> : Boundary at <em>end</em> of word between word
 and space, 0-length anchor</li>
 <li>You can refer back to an exact copy of a matched (group) using \1,
 \2, etc..</li>
@@ -768,7 +767,7 @@ any links that you are not going to use.
   "url": "https://csiro-data-school.github.io/regex-24/instructor/04-egrep-charclasses.html",
   "identifier": "https://csiro-data-school.github.io/regex-24/instructor/04-egrep-charclasses.html",
   "dateCreated": "2024-10-21",
-  "dateModified": "2024-10-23",
+  "dateModified": "2024-10-25",
   "datePublished": "2024-10-25"
 }
 

@@ -494,7 +494,7 @@ line.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -577,7 +577,7 @@ retaining everything between</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -628,7 +628,7 @@ dd/mm/yyyy format, into yymmdd format. E.g. change 23/08/2012 into
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <blockquote>
 <div class="codewrapper sourceCode" id="cb24">
@@ -669,7 +669,7 @@ multiple lines?</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -691,13 +691,16 @@ multiple lines?</p></li>
 <p>Have another look at ‘namesndates.txt’
 (<code>cat namesndates.txt</code>)</p>
 <p>A number of typos and inconsistencies were made when adding rows to
-‘namesndates.txt’: 1. One row has a name written as “surname,
-firstname”, instead of “firstname surname”. 2. One row has a date
-written in “dd-mm-yyyy” format instead of “dd/mm/yyyy” format. 3. One
-row is comma-separated, while the rest are tab-separated. 4. Some rows
-have multiple spaces, or a mix of tabs and spaces, in place of just
-single tabs. (<code>cat -T namesndates.txt</code> can help distinguish
-tabs from spaces)</p>
+‘namesndates.txt’:<br>
+1. One row has a name written as “surname, firstname”, instead of
+“firstname surname”.<br>
+2. One row has a date written in “dd-mm-yyyy” format instead of
+“dd/mm/yyyy” format.<br>
+3. One row is comma-separated, while the rest are tab-separated.<br>
+4. Some rows have multiple spaces, or a mix of tabs and spaces, in place
+of just single tabs.<br>
+(<code>cat -T namesndates.txt</code> can help distinguish tabs from
+spaces)</p>
 <p>Using multiple piped sed substitutions, can you correct all of these
 mistakes?</p>
 </div>
@@ -708,33 +711,46 @@ mistakes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/^(\w+), (\w+)/\2 \1/'</span> namesndates.txt <span class="kw">|</span> <span class="dt">\</span></span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s;([0-9]{2})-([0-9]{2})-([0-9]{4});\1/\2/\3;'</span> <span class="kw">|</span> <span class="dt">\</span></span>
-<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/,/\t/g'</span> <span class="kw">|</span> <span class="dt">\</span></span>
-<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/\s{2,}/\t/g'</span> <span class="op">&gt;</span> namesndates-FIXED.txt</span></code></pre>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>  <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s;([0-9]{2})-([0-9]{2})-([0-9]{4});\1/\2/\3;'</span> <span class="kw">|</span> <span class="dt">\</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>  <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/,/\t/g'</span> <span class="kw">|</span> <span class="dt">\</span></span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a>  <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/\s{2,}/\t/g'</span> <span class="op">&gt;</span> namesndates-FIXED.txt</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
+<div id="prototyping-solutions" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="prototyping-solutions" class="callout-inner">
+<h3 class="callout-title">Prototyping solutions</h3>
+<div class="callout-content">
 <p>Tips for turning longer complex strings into regular expression
 substitutions:<br>
 1. Start by copying a real example of a whole string into your pattern
-section. 2. Add escape back slashes to any forward slashes, literal
-brackets, etc., as necessary. 3. “Circle” the parts of the string you’d
-like to separately retain, with round brackets. 4. Write out your
-replacement pattern, using back-reference to what you circled. 5. At
-this stage, the substitution should work, but only for the specific real
-example string that you’ve started with. 6. Finally, start abstracting
-your search pattern, replacing parts of your example string with
-wild-cards or character-classes as needed, to strike the balance between
-specificity and ambiguity required to match all that you want and not
-all that you don’t want.</p>
+section.<br>
+2. Add escape back slashes to any forward slashes, literal brackets,
+etc., as necessary.<br>
+3. “Circle” the parts of the string you’d like to separately retain,
+with round brackets.<br>
+4. Write out your replacement pattern, using back-reference to what you
+circled.<br>
+5. At this stage, the substitution should work, but only for the
+specific real example string that you’ve started with.<br>
+6. Finally, start abstracting your search pattern, replacing parts of
+your example string with wild-cards or character-classes as needed, to
+strike the balance between specificity and ambiguity required to match
+all that you want and not all that you don’t want.</p>
+</div>
+</div>
+</div>
 <div id="try-it---information-from-file-names" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -775,7 +791,7 @@ Sample4 Rep2    24hours sun     s4-R2_24h-sun.fasta     /path/to/my/data/folder2
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
