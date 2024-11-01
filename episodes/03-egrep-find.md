@@ -429,12 +429,13 @@ echo "11/06/91 5/9/2018" | grep -E -o '[0-9]+/[0-9]+/[0-9]+'
 
 ## Try it 5
 
-Have a look at 'namesndates.txt' (```cat namesndates.txt```)
-1. Use 'grep -E -o' on namesndates.txt to list times (e.g. 20:57).
-2. Use 'grep -E -o' on namesndates.txt to list all calendar dates.
-3. Consider extra information we know about dates: days will be at most 31, months at most 12.  
-    Could we use aspects of this information within our regex for more sensibleness checking?
+Have a look at 'namesndates.txt' (```cat namesndates.txt```)  
 
+1. Use 'grep -E -o' on namesndates.txt to list times (e.g. 20:57).  
+2. Use 'grep -E -o' on namesndates.txt to list all calendar dates.  
+3. Consider extra information we know about dates: days will be at most 31, months at most 12.  
+    Could we use aspects of this information within our regex for more sensibleness checking?  
+  
 :::::::::::::::::::::::: solution  
 
 ## Solution
